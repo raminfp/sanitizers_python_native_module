@@ -55,7 +55,7 @@ ImportError: /usr/local/lib/python3.9/dist-packages/ipv6.cpython-39-x86_64-linux
 >>> 
 ```
 
-So we see `undefined symbol: __asan_option_detect_stack_use_after_return` error, now i need `LD_PRELOAD` for load `asan_with_fuzzer.so`.
+So we see `undefined symbol: __asan_option_detect_stack_use_after_return` error, now i need `LD_PRELOAD` environmental variable for load `asan_with_fuzzer.so`.
 
 ```bash
 
