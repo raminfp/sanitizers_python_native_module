@@ -36,7 +36,8 @@ LD_PRELOAD="$(pwd)/asan_with_fuzzer.so" python3.9
 
 ##### How to sanitizer ipv6_python source code
 
-1- We need build `ipv6_python`
+1- We need build `ipv6_python` - https://github.com/nasa/ipv6_python
+
 ```bash
 $ CC="/usr/bin/clang" \ 
 	CFLAGS="-fsanitize=address" \
