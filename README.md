@@ -20,7 +20,7 @@ One of those tools is ASan (Address Sanitizer) which uses compiler instrumentati
 See wiki[https://github.com/google/sanitizers/wiki/AddressSanitizer] if you are interested in gory details. In general, to sanitize just a single module of large app you should compile and link it with `-fsanitize=address` <br />
 
 ```bash
-$ cd ipv6_python
+
 $ CC="/usr/bin/clang" \ 
 	CFLAGS="-fsanitize=address" \
 	LDSHARED="clang -shared" \
@@ -36,9 +36,10 @@ LD_PRELOAD="$(pwd)/asan_with_fuzzer.so" python3.9
 
 ##### How to sanitizer ipv6_python source code
 
-1- We need build `ipv6_python` - https://github.com/nasa/ipv6_python
+1- We need build `ipv6_python` python module - https://github.com/nasa/ipv6_python
 
 ```bash
+$ cd ipv6_python
 $ CC="/usr/bin/clang" \ 
 	CFLAGS="-fsanitize=address" \
 	LDSHARED="clang -shared" \
