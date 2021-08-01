@@ -86,7 +86,7 @@ sock.sendto(data,sockaddr)
 4- run `harness.py ` 
 
 ```bash 
-# LD_PRELOAD="$(pwd)/asan_with_fuzzer.so" python3.9 harness.py                                                                               1 ⨯
+$ LD_PRELOAD="$(pwd)/asan_with_fuzzer.so" python3.9 harness.py                                                                               1 ⨯
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
 ==3810==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f7f81a153c0 bp 0x7ffed0cd1ed0 sp 0x7ffed0cd1b60 T0)
@@ -116,5 +116,7 @@ SUMMARY: AddressSanitizer: SEGV /usr/include/python3.9/object.h:422:13 in _Py_DE
 ```
 
 Now we see discover `Null pointer dereference` bug,
+
+![Crashed](https://github.com/raminfp/sanitizers_python_native_module/blob/main/img/ipv6_sanitize.png)
 
 This bug Fixed - https://github.com/nasa/ipv6_python/commit/bc02ad0cc807437a9f178486c4584568b88055ff
