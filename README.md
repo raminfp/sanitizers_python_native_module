@@ -46,8 +46,10 @@ $ CC="/usr/bin/clang" \
 	python3.9 ./setup.py install
 
 ```
-2-
+2- Check module `ipv6`
+
 ```bash
+$ python3.9
 >>> import ipv6
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
