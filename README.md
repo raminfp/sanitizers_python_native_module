@@ -17,7 +17,7 @@ One of those tools is ASan (Address Sanitizer) which uses compiler instrumentati
 
 
 ##### How to build
-See wiki if you are interested in gory details. In general, to sanitize just a single module of large app you should compile and link it with -fsanitize=address <br />
+See wiki[https://github.com/google/sanitizers/wiki/AddressSanitizer] if you are interested in gory details. In general, to sanitize just a single module of large app you should compile and link it with -fsanitize=address <br />
 
 ```bash
 
@@ -57,6 +57,7 @@ ImportError: /usr/local/lib/python3.9/dist-packages/ipv6.cpython-39-x86_64-linux
 So we see `undefined symbol: __asan_option_detect_stack_use_after_return` error, now i need `LD_PRELOAD` for load `asan_with_fuzzer.so`.
 
 ```bash
+
 $ LD_PRELOAD="$(pwd)/asan_with_fuzzer.so" python3.9
 >>> import ipv6
 >>> 
