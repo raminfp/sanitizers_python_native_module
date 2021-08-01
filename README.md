@@ -17,7 +17,7 @@ One of those tools is ASan (Address Sanitizer) which uses compiler instrumentati
 
 
 ##### How to build
-See wiki[https://github.com/google/sanitizers/wiki/AddressSanitizer] if you are interested in gory details. In general, to sanitize just a single module of large app you should compile and link it with -fsanitize=address <br />
+See wiki[https://github.com/google/sanitizers/wiki/AddressSanitizer] if you are interested in gory details. In general, to sanitize just a single module of large app you should compile and link it with `-fsanitize=address` <br />
 
 ```bash
 
@@ -123,5 +123,5 @@ Now we discover `Null pointer dereference` bug,
 
 This bug Fixed - https://github.com/nasa/ipv6_python/commit/bc02ad0cc807437a9f178486c4584568b88055ff
 
-Thanks,
+Thanks,<br />
 Ramin
