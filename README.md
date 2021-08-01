@@ -27,7 +27,7 @@ $ CC="/usr/bin/clang" \
 	python3.9 ./setup.py install
 ```
 
-##### LibFuzzer.so Path 
+##### asan_with_fuzzer.so  
 So run application with LD_PRELOADed[https://github.com/google/sanitizers/wiki/AddressSanitizerAsDso#asan-and-ld_preload] libasan.so. 
 
 ```bash
