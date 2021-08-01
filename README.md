@@ -17,7 +17,7 @@ One of those tools is ASan (Address Sanitizer) which uses compiler instrumentati
 
 
 ### How to build
-See wiki[https://github.com/google/sanitizers/wiki/AddressSanitizer] if you are interested in gory details. In general, to sanitize just a single module of large app you should compile and link it with `-fsanitize=address` <br />
+See wiki[https://github.com/google/sanitizers/wiki/AddressSanitizer] if you are interested in details. In general, to sanitize just a single module of large app you should compile and link it with `-fsanitize=address` <br />
 
 ```bash
 
