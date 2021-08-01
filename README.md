@@ -117,7 +117,7 @@ SUMMARY: AddressSanitizer: SEGV /usr/include/python3.9/object.h:422:13 in _Py_DE
                      
 ```
 
-Now we see discover `Null pointer dereference` bug,
+Now we discover `Null pointer dereference` bug,
 
 ![Crashed](https://github.com/raminfp/sanitizers_python_native_module/blob/main/img/ipv6_sanitize.png)
 
