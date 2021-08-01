@@ -1,13 +1,13 @@
 ###  Sanitizers Python Native Module
 
-##### Intro 
+### Intro 
 Python has great interoperability with C and C++ through extension modules. There are many reasons to do this, such as improving performance, <br />
 accessing APIs not exposed by the language, or interfacing with libraries written in C or C++.
 
 Unlike Python however, C and C++ are not memory safe. Luckily, great tools exist to help diagnose these kind of issues.<br />
 One of those tools is ASan (Address Sanitizer) which uses compiler instrumentation to detect memory errors at runtime.
 
-##### Type of Sanitizers
+### Type of Sanitizers
 
 * AddressSanitizer - ASAN
 * ThreadSanitizer - TSAN
@@ -16,7 +16,7 @@ One of those tools is ASan (Address Sanitizer) which uses compiler instrumentati
 * DataFlowSanitizer - DSAN
 
 
-##### How to build
+### How to build
 See wiki[https://github.com/google/sanitizers/wiki/AddressSanitizer] if you are interested in gory details. In general, to sanitize just a single module of large app you should compile and link it with `-fsanitize=address` <br />
 
 ```bash
@@ -27,14 +27,14 @@ $ CC="/usr/bin/clang" \
 	python3.9 ./setup.py install
 ```
 
-##### asan_with_fuzzer.so  
+### asan_with_fuzzer.so  
 So run application with LD_PRELOADed[https://github.com/google/sanitizers/wiki/AddressSanitizerAsDso#asan-and-ld_preload] libasan.so. 
 
 ```bash
 LD_PRELOAD="$(pwd)/asan_with_fuzzer.so" python3.9
 ```
 
-##### How to sanitizer ipv6_python source code
+### How to sanitizer ipv6_python source code
 
 1- We need build `ipv6_python` python module - https://github.com/nasa/ipv6_python
 
