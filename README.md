@@ -20,7 +20,7 @@ One of those tools is ASan (Address Sanitizer) which uses compiler instrumentati
 See wiki[https://github.com/google/sanitizers/wiki/AddressSanitizer] if you are interested in gory details. In general, to sanitize just a single module of large app you should compile and link it with `-fsanitize=address` <br />
 
 ```bash
-
+$ cd ipv6_python
 $ CC="/usr/bin/clang" \ 
 	CFLAGS="-fsanitize=address" \
 	LDSHARED="clang -shared" \
